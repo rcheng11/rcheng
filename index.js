@@ -85,9 +85,11 @@ function processAnswer(s){
   }
   else if(input.includes("look like in real life")){
     response = "I think I'm a solid 4/10. You'll probably catch smiling 90% of the time 😅.";
-    $(".faceIcon").attr("src","images/realGif.gif");
+    $(".faceIcon").hide();
+    $(".showUnder").show();
     setTimeout(function(){
-      $(".faceIcon").attr("src","images/faceIcon.jpg")
+      $(".faceIcon").show()
+      $(".showUnder").hide();
     },4500)
   }
   else if(input.includes("hi")){

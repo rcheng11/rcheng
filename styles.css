@@ -76,6 +76,13 @@ a:hover{
 .section{
   margin-top: 50px;
 }
+.showUnder{
+  z-index: -1;
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
+  display: none;
+}
 .pText{
   text-align: center;
 }
