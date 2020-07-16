@@ -21,6 +21,7 @@ a:hover{
 .collapseHead{
   background-color:#e35a3d;
   color:#edddc0;
+  padding: 4px;
 }
 .collapseBody{
   padding: 20px 15px 10px 15px;
@@ -29,6 +30,10 @@ a:hover{
   margin: 10px 0;
   border-radius: 20px;
   border: 1px solid #524132 ;
+}
+.contactIcon{
+  font-size: 100px;
+  color:#e35a3d;
 }
 .customButton{
   background-color:#e35a3d;

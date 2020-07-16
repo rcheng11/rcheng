@@ -4,7 +4,7 @@ var amaResponse = $(".chatBox");
 var amaButton = $(".askButton");
 var amaHidden = true;
 var amaResponseHidden = true;
-var jokes = ["My physics grade 😰", "Eating sushi with a fork 💀", "I read a book the other day about levitation. Can't put it down.", "The past, the present, and the future walk into a bar. It was tense.","My childhood drawing has been in jail for the past 10 years. I think it was framed!","Hear me out. If we were all ants. Our uncles... would be ants."]
+var jokes = ["My physics grade 😰", "Eating sushi with a fork 💀", "I read a book the other day about levitation. Can't put it down. 🙃", "The past, the present, and the future walk into a bar. It was tense. 😏","My childhood drawing has been in jail for the past 10 years. I think it was framed! 😏","Hear me out. If we were all ants. Our uncles... would be ants. 😏"]
 faceIcon.click(function(){
   if(amaHidden == true){
     ama.show();
@@ -37,7 +37,7 @@ function scrollDown(){
   amaResponse.scrollTop(function() { return this.scrollHeight; });
 }
 function processAnswer(s){
-  input = s.toLowerCase();
+  var input = s.toLowerCase();
   var response = "I either couldn't understand that or my human hasn't given me that information yet. Sorry! 😖";
   if(input.includes("favorite food")){
     response = "Carrots with hummus 😳... tied with sushi!"
@@ -68,7 +68,7 @@ function processAnswer(s){
     response = "<ul><li>HTML</li><li>CSS</li><li>Javascript</li><li>Python</li><li>Java</li><li>Currently learning SQL and Swift</li></ul>";
   }
   else if(input.includes("favorite tv show")){
-    response = "Avatar the Last Airbender. No even a question 😤.";
+    response = "Avatar the Last Airbender. Not even a question 😤.";
   }
   else if(input.includes("thoughts on potatoes")){
     response = "Potatoes are an A-tier vegetable. Versatile, delicious, nutritious 10/10. 🥵";
@@ -84,7 +84,7 @@ function processAnswer(s){
     }
   }
   else if(input.includes("look like in real life")){
-    response = "I think I'm a solid 4/10. You'll probably catch smiling 90% of the time 😅.";
+    response = "According to AI I average a 4/10. Regardless, you'll probably catch me smiling 90% of the time 😅.";
     $(".faceIcon").hide();
     $(".showUnder").show();
     setTimeout(function(){
@@ -96,10 +96,13 @@ function processAnswer(s){
     response = "Hey!";
   }
   else if(input.includes("hello")){
-    response = "Hello!"
+    response = "Hello!";
   }
   else if(input.includes("hey")){
-    response = "Hi!"
+    response = "Hi!";
+  }
+  else if(input.includes("favorite color")){
+    response = "I like most colors equally (as long as they're combined properly)! It just depends on the situation.";
   }
   $(".chatBox").append("<br><span style='color:gray'>Q: " + s + "</span> <br>" + response);
   scrollDown();
